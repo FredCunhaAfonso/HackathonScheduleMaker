@@ -1,6 +1,8 @@
+
 #include "../header/Hackathon.h"
 #include "../header/tarefa.h"
 #include "../header/user.h"
+
 
 int compare_tarefa(const void* a, const void* b) {
     Tarefa* tarefaA = (Tarefa*) a;

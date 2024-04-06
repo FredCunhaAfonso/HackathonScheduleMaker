@@ -1,8 +1,9 @@
-#ifndef user
-#define user
 
+#ifndef USER
+#define USER
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "tarefa.h"
 
 typedef struct pessoa {

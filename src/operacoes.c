@@ -5,6 +5,3 @@
 
 void horasEstudadas (int horas,Tarefa* task){
     task -> horas_estudadas + horas;    
-}
-
-
