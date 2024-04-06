@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <user.h>
-#include "../header/tarefa.h"
 #include "../header/user.h"
 
 //funcao construtora do struct user
