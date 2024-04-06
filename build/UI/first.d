@@ -1,4 +1,4 @@
-build/main.o: src/main.c src/../header/parser.h header/first.h \
+build/UI/first.o: src/UI/first.c header/first.h \
  /usr/include/gtk-3.0/gtk/gtk.h /usr/include/gtk-3.0/gdk/gdk.h \
  /usr/include/gtk-3.0/gdk/gdkconfig.h /usr/include/glib-2.0/glib.h \
  /usr/include/glib-2.0/glib/galloca.h /usr/include/glib-2.0/glib/gtypes.h \
@@ -608,8 +608,8 @@ build/main.o: src/main.c src/../header/parser.h header/first.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvscale.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvseparator.h \
- /usr/include/gtk-3.0/gtk/gtk-autocleanups.h
-src/../header/parser.h:
+ /usr/include/gtk-3.0/gtk/gtk-autocleanups.h header/landingpage.h \
+ header/savebox.h
 header/first.h:
 /usr/include/gtk-3.0/gtk/gtk.h:
 /usr/include/gtk-3.0/gdk/gdk.h:
@@ -1268,3 +1268,5 @@ header/first.h:
 /usr/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h:
 /usr/include/gtk-3.0/gtk/deprecated/gtkvseparator.h:
 /usr/include/gtk-3.0/gtk/gtk-autocleanups.h:
+header/landingpage.h:
+header/savebox.h:
