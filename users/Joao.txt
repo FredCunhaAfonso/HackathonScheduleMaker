@@ -1,0 +1,38 @@
+=== Joao ===
+
+[Disponibilidade]
+──────────────────────
+05h | Segunda-feira
+04h | Terça-feira
+07h | Quarta-feirah
+03h | Quinta-feira
+03h | Sexta-feira
+04h | Sábado
+02h | Domingo
+──────────────────────
+
+[Disciplinas]
+Matematica
+2023/03/01
+50.00h
+
+Portugues
+2023/03/03
+40.50h
+
+Logica
+2023/03/04
+7.80h
+
+MNoL
+2023/03/05
+3.50h
+
+Algebra
+2023/03/06
+3.40h
+
+Fisica
+2023/03/07
+4.80h
+
