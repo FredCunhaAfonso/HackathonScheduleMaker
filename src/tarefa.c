@@ -5,7 +5,7 @@
 
 //duncao construtora do struct tarefa
 Tarefa * tarefa_nova (int tipo, char * nome, struct tm data, int grau, int horas_total, int horas_estudadas) {
-    Tarefa * t = (Tarefa *) malloc (sizeof (Tarefa));
+    struct tarefa * t = (struct tarefa *) malloc (sizeof (struct tarefa));
     t->tipo = tipo;
     t->nome = nome;
     t->data = data;
@@ -15,3 +15,14 @@ Tarefa * tarefa_nova (int tipo, char * nome, struct tm data, int grau, int horas
     return t;
 }
 
+//criar clone de uma tarefa para outra tarefa 
+Tarefa * tarefa_clone (struct tarefa * t) {
+    struct tarefa * clone = (struct tarefa *) malloc (sizeof (struct tarefa));
+    clone->tipo = t->tipo;
+    clone->nome = strdup(t->nome);
+    clone->data = t->data;
+    clone->grau = t->grau;
+    clone->horas_total = t->horas_total;
+    clone->horas_estudadas = t->horas_estudadas;
+    return clone;
+}
