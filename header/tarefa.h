@@ -1,3 +1,6 @@
+#ifndef tarefa
+#define tarefa
+
 #include <stdio.h>
 #include <time.h>
 
@@ -7,9 +10,17 @@ typedef struct tarefa {
     char * nome ;
     struct tm data;
     int grau ; //grau conforto 
-    int horas_total ; //nr horas total
-    int horas_estudadas ; //nr horas estudadas
+    double horas_total ; //nr horas total
+    double horas_estudadas ; //nr horas estudadas
     
 } Tarefa;
 
-Tarefa * tarefa_nova (int tipo, char * nome, struct tm data, int grau, int horas_total, int horas_estudadas) ;
+typedef struct daily {
+
+    char* disciplina;
+    double horas;
+} Daily;
+
+Tarefa * tarefa_nova (int tipo, char * nome, struct tm data, int grau, double horas_total, double horas_estudadas) ;
+
+#endif
