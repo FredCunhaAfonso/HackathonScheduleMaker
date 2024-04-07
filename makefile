@@ -1,5 +1,5 @@
 CC := gcc
-CFLAGS := -std=c11 -Wall -Wextra `pkg-config --cflags gtk+-3.0`
+CFLAGS := -std=c11 `pkg-config --cflags gtk+-3.0` -Iheader
 LDFLAGS := 
 LIBS := -lm `pkg-config --libs gtk+-3.0`
 
@@ -7,7 +7,7 @@ SRC_DIR := src
 BUILD_DIR := build
 TARGET := studycat
 
-SRCS := $(wildcard $(SRC_DIR)/*.c)
+SRCS := $(wildcard $(SRC_DIR)/*.c src/UI/*.c)
 OBJS := $(SRCS:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
 DEPS := $(OBJS:.o=.d)
 

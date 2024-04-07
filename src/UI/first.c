@@ -1,28 +1,30 @@
-#include "../header/first.h"
+#include "first.h"
+#include <landingpage.h>
+#include "savebox.h"
+
 //sudo apt-get install libgtk-3-dev
 
-static void activate (GtkApplication* app, gpointer user_data){
-  
-  GtkWidget *window;
-
-  window = gtk_application_window_new (app);
-  gtk_window_set_title (GTK_WINDOW (window), "Window");
-  gtk_window_set_default_size (GTK_WINDOW (window), 200, 200);
-  gtk_widget_show_all (window);
-}
-
+extern Box* inputCollect;
 
 int initGTK(int argc, char *argv[]){
+    
+    gtk_init(&argc, &argv);
 
-  GtkApplication *app;
-  int status;
+    inputCollect = malloc(sizeof(Box));
+    inputCollect->name = malloc(sizeof(100));
 
-  app = gtk_application_new ("ImAStudyindCat", G_APPLICATION_FLAGS_NONE);
-  g_signal_connect (app, "activate", G_CALLBACK (activate), NULL);
-  status = g_application_run (G_APPLICATION (app), argc, argv);
-  g_object_unref (app);
+    // Create a new window
+    GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+    gtk_window_set_title(GTK_WINDOW(window), "ImAStudyCat");
+    gtk_window_set_default_size(GTK_WINDOW(window), 2400, 1000);
 
-  return status;
+    landing_page(window, &inputCollect);
+
+    g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
+
+    // Show the window and enter the main GTK+ event loop
+    gtk_widget_show_all(window);
+    gtk_main();
 
     return 0;
 }
