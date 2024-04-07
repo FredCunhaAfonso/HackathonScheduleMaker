@@ -32,13 +32,8 @@ int mainpage(GtkWidget *window, Box *inputCollectR){
     gtk_box_pack_start(GTK_BOX(vbox), hbox_profile, TRUE, TRUE, 0);
 
     // Carregar a imagem do perfil (substitua "profile_pic.jpg" pelo caminho da imagem)
-
-    /*  
-    GtkWidget *image = gtk_image_new_from_file("src/UI/profile_pic.jpg");
-    gtk_image_set_pixel_size(GTK_IMAGE(image), 100);    
-    gtk_widget_set_size_request(image, 100, -1);  // Set a minimum width for the image
+    GtkWidget *image = gtk_image_new_from_file("src/UI/profile_pic2.jpg");
     gtk_box_pack_start(GTK_BOX(hbox_profile), image, FALSE, FALSE, 0);
-    */
 
     // Criar uma label para a mensagem de boas-vindas
     char welcome_message[100];
