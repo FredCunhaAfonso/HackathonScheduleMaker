@@ -6,6 +6,6 @@
 
 
 void button_clicked(GtkWidget *widget, gpointer data);
-int landing_page(GtkWidget* window);
+int landing_page(GtkWidget* window, Box* inputCollectR);
 
 #endif

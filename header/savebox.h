@@ -3,8 +3,7 @@
 
 
 typedef struct box{
-    char* name;
-    
+    char* name; 
 } Box;
 
 #endif

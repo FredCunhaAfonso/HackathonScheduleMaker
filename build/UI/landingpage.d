@@ -608,7 +608,8 @@ build/UI/landingpage.o: src/UI/landingpage.c header/landingpage.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvscale.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvseparator.h \
- /usr/include/gtk-3.0/gtk/gtk-autocleanups.h header/savebox.h
+ /usr/include/gtk-3.0/gtk/gtk-autocleanups.h header/savebox.h \
+ src/UI/mainpage.h
 header/landingpage.h:
 /usr/include/gtk-3.0/gtk/gtk.h:
 /usr/include/gtk-3.0/gdk/gdk.h:
@@ -1268,3 +1269,4 @@ header/landingpage.h:
 /usr/include/gtk-3.0/gtk/deprecated/gtkvseparator.h:
 /usr/include/gtk-3.0/gtk/gtk-autocleanups.h:
 header/savebox.h:
+src/UI/mainpage.h:

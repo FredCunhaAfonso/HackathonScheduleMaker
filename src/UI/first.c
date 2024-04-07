@@ -11,13 +11,14 @@ int initGTK(int argc, char *argv[]){
     gtk_init(&argc, &argv);
 
     inputCollect = malloc(sizeof(Box));
+    inputCollect->name = malloc(sizeof(100));
 
     // Create a new window
     GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     gtk_window_set_title(GTK_WINDOW(window), "ImAStudyCat");
     gtk_window_set_default_size(GTK_WINDOW(window), 2400, 1000);
 
-    landing_page(window);
+    landing_page(window, &inputCollect);
 
     g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
