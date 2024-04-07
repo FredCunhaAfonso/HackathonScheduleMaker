@@ -1,8 +1,8 @@
-#ifndef tarefa
-#define tarefa
-
 #include <stdio.h>
 #include <time.h>
+#ifndef TAREFA_H
+#define TAREFA_H
+
 
 typedef struct tarefa {
 

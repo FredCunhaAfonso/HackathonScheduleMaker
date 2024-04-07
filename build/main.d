@@ -1,4 +1,5 @@
-build/main.o: src/main.c src/../header/parser.h src/../header/first.h \
+build/main.o: src/main.c src/../header/parser.h src/../header/user.h \
+ src/../header/tarefa.h src/../header/first.h \
  /usr/include/gtk-3.0/gtk/gtk.h /usr/include/gtk-3.0/gdk/gdk.h \
  /usr/include/gtk-3.0/gdk/gdkconfig.h /usr/include/glib-2.0/glib.h \
  /usr/include/glib-2.0/glib/galloca.h /usr/include/glib-2.0/glib/gtypes.h \
@@ -610,6 +611,8 @@ build/main.o: src/main.c src/../header/parser.h src/../header/first.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvseparator.h \
  /usr/include/gtk-3.0/gtk/gtk-autocleanups.h
 src/../header/parser.h:
+src/../header/user.h:
+src/../header/tarefa.h:
 src/../header/first.h:
 /usr/include/gtk-3.0/gtk/gtk.h:
 /usr/include/gtk-3.0/gdk/gdk.h:

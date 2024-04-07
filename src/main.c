@@ -1,4 +1,5 @@
 #include "../header/parser.h"
+#include "../header/user.h"
 #include "../header/first.h"
 
 void test_parse(){
@@ -28,6 +29,9 @@ void test_parse(){
 int main(){
 	
 	test_parse();
+	printf("\n\n");
+
+	test_user();
 
   return 0;
 }
