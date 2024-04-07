@@ -80,15 +80,14 @@ void test_user(){
 
     person.tarefas = malloc(sizeof(Tarefa) * 3);
 
-
         // Create some Tarefa objects
-    person.tarefas[0].nome = strdup("Math");
+    person.tarefas[0].nome = "Matematica";
     person.tarefas[0].horas_total = 3;
     person.tarefas[0].data = (struct tm){.tm_mday = 10, .tm_mon = 3, .tm_year = 2024-1900}; 
-    person.tarefas[1].nome = strdup("Ciencias");
+    person.tarefas[1].nome = "Ciencias";
     person.tarefas[1].horas_total = 60;
     person.tarefas[1].data = (struct tm){.tm_mday = 12, .tm_mon = 3, .tm_year = 2024-1900}; // 31 Dec 2022
-    person.tarefas[2].nome = strdup("Portugues");
+    person.tarefas[2].nome = "Portugues";
     person.tarefas[2].horas_total = 15;
     person.tarefas[2].data = (struct tm){.tm_mday = 15, .tm_mon = 3, .tm_year = 2024-1900}; // 31 Dec 2022
 

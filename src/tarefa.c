@@ -5,10 +5,10 @@
 #include <time.h>
 
 //duncao construtora do struct tarefa
-Tarefa * tarefa_nova (int tipo, char * nome, struct tm data, int grau, double horas_total, double horas_estudadas) {
+Tarefa * tarefa_nova (int tipo, char * name, struct tm data, int grau, double horas_total, double horas_estudadas) {
     Tarefa * t = malloc (sizeof (Tarefa));
     t->tipo = tipo;
-    t->nome = strdup(nome);
+    t->nome = name;
     t->data = data;
     t->grau = grau;
     t->horas_total = horas_total;
