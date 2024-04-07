@@ -8,6 +8,8 @@
 #include <assert.h>
 #include <string.h>
 #include <math.h>
+#include <time.h>
+#include "tarefa.h"
 
 void horasEstudadas (int horas,Tarefa* task);
 double horasEstudo (Tarefa tarefa1);

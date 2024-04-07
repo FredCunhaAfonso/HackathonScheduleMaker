@@ -22,7 +22,7 @@ void test_parse(){
 	double hora[] = {50.0,40.5,7.8,3.5,3.4,4.8}; 
 
 
-				 
+printf("HEKKI!\n");
 	set_user_file("Joao",nums,disciplinas,dates,hora,6);
 	print_user_file("Joao");
 }
@@ -31,7 +31,7 @@ void test_parse(){
 int main(){
 	
 	test_parse();
-	printf("\n\n");
+	printf("aaaaaa\n");
 
 	test_user();
 
