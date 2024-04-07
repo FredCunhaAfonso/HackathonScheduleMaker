@@ -1,5 +1,5 @@
 #include "mainpage.h"
-
+#include "user.h"
 #include <savebox.h>
 
 Box* inputCollectM;
@@ -56,13 +56,18 @@ int mainpage(GtkWidget *window, Box *inputCollectR){
     sprintf(age_message, "%d years old", user_age);
     GtkWidget *label_age = gtk_label_new(age_message);
     gtk_box_pack_start(GTK_BOX(vbox), label_age, TRUE, TRUE, 0);
+    
+    char* schedule = test_user();
 
-    // Criar uma caixa de texto grande
-    GtkWidget *text_view = gtk_text_view_new();
-    GtkTextBuffer *buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(text_view));
-    // Aqui você pode adicionar o texto que desejar ao buffer da caixa de texto
-    gtk_box_pack_start(GTK_BOX(vbox), text_view, TRUE, TRUE, 0);
+    // Check that schedule is a valid string
+    printf("Schedule: %s\n", schedule);
 
+    // Create a label with the schedule string
+    GtkWidget *taskBox = gtk_label_new(schedule);
+    gtk_box_pack_start(GTK_BOX(hbox_profile), taskBox , TRUE, TRUE, 0);
+
+    // Make sure the label is visible
+    gtk_widget_show(taskBox);
     // Mostrar todos os widgets
     gtk_widget_show_all(window);
 

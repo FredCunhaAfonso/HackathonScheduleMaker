@@ -1,8 +1,10 @@
-#include "../header/tarefa.h"
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+
+#include "../header/tarefa.h"
 
 //duncao construtora do struct tarefa
 Tarefa * tarefa_nova (int tipo, char * name, struct tm data, int grau, double horas_total, double horas_estudadas) {

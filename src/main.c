@@ -28,12 +28,14 @@ printf("HEKKI!\n");
 }
 
 
-int main(){
+int main(int argc, char *argv[]){
 	
 	test_parse();
 	printf("aaaaaa\n");
 
 	test_user();
+
+	initGTK(argc,argv);
 
 	return 0;
 }

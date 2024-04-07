@@ -1,6 +1,4 @@
-
-#include "../header/Hackathon.h"
-#include "../header/tarefa.h"
+#include "../header/ScheduleManager.h"
 #include "../header/user.h"
 
 
@@ -50,29 +48,7 @@ double horasEstudo (Tarefa tarefa1){
     return (tarefa1.horas_total-tarefa1.horas_estudadas)/diasRestantes;
 }
 
-Daily* makeSchedule (double horas_Hoje , Pessoa person){
-
-    printf("SAFE\n\n");
-    
-    Daily* tarefasDiarias = malloc(person.nTarefas * sizeof(Daily));
-
-    for (int i = 0 ; i < person.nTarefas; i++){
-        tarefasDiarias[i].disciplina = person.tarefas[i].nome;
-        
-        if (horas_Hoje > 0 && horasEstudo (person.tarefas[i]) > horas_Hoje){
-            tarefasDiarias[i].horas = horas_Hoje;
-        }
-        else if (horas_Hoje > 0) tarefasDiarias[i].horas = horasEstudo (person.tarefas[i]);
-        
-        horas_Hoje = horas_Hoje - horasEstudo (person.tarefas[i]);
-    }
-    printf("SAFE\n\n");
-
-    return tarefasDiarias;
-}
-
-
-void test_user(){
+char* test_user(){
     // Create a Pessoa object
     Pessoa person;
     person.nome = "John";
@@ -92,23 +68,30 @@ void test_user(){
     person.tarefas[2].data = (struct tm){.tm_mday = 15, .tm_mon = 3, .tm_year = 2024-1900}; // 31 Dec 2022
 
 
-    printf("SAFE XD\n\n");
-
     // Call makeSchedule
     double horas_Hoje = 8;
     Daily* schedule = makeSchedule(horas_Hoje, person);
 
     // Print the schedule
-    for (int i = 0; i < person.nTarefas ; i++) {
-    printf("olaola  %d\n",i);
+    char* tasks = calloc(3000, sizeof(char));
+    
+    for (int i = 0; i < person.nTarefas; i++) {
         if (trunc(schedule[i].horas) == 0) {
-            printf ("hoje nao tens que estudar yupiiii!!!\n");
+            char temp[100]; // Crie uma string temporária para armazenar o resultado formatado
+            sprintf(temp, "Hoje nao tens que estudar %s!\n", schedule[i].disciplina);
+            strcat(tasks, temp); // Concatene a string formatada à variável tasks
+        } else {
+            char temp[100]; // Crie uma string temporária para armazenar o resultado formatado
+            sprintf(temp, "Task: %s, Hours: %d\n", schedule[i].disciplina, (int)trunc(schedule[i].horas));
+            strcat(tasks, temp); // Concatene a string formatada à variável tasks
+            //printf("Alone: Task: %s, Hours: %f\n", schedule[i].disciplina, schedule[i].horas);
         }
-        else {
-            printf("Task: %s, Hours: %f\n", schedule[i].disciplina, trunc(schedule[i].horas));
-        }
+        //printf("YO\n");
+        //printf("String: %s", tasks);
     }
-    // Don't forget to free the memory
-    free(schedule);
 
+
+    // Don't forget to free the memory
+    //free(schedule);
+    return tasks;
 }

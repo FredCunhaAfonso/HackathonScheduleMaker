@@ -1,6 +1,6 @@
-#include "../header/user.h"
-#include "../header/tarefa.h"
-#include "../header/Hackathon.h"
+#include "user.h"
+#include "tarefa.h"
+#include "ScheduleManager.h"
 
 
 void horasEstudadas (int horas,Tarefa* task){

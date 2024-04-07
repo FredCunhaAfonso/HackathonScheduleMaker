@@ -74,8 +74,6 @@ void print_user_file(char * username){
 
     }
 
-
-
     free(linha);
     free(usuario);
     fclose(user);

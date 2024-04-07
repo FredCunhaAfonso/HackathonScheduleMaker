@@ -1,8 +1,5 @@
-#include <stdio.h>
-#include <time.h>
-#ifndef TAREFA_H
-#define TAREFA_H
-
+#ifndef TAREFA
+#define TAREFA
 
 typedef struct tarefa {
 
@@ -20,6 +17,7 @@ typedef struct daily {
     char* disciplina;
     double horas;
 } Daily;
+
 
 Tarefa * tarefa_nova (int tipo, char * nome, struct tm data, int grau, double horas_total, double horas_estudadas) ;
 

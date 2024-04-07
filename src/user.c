@@ -13,3 +13,23 @@ Pessoa * pessoa_nova (char* nome, char* classe, Tarefa * tarefas, int dias[7]) {
     return p;
 }
 
+Daily* makeSchedule (double horas_Hoje , Pessoa person){
+        
+        Daily* tarefasDiarias = malloc(person.nTarefas * sizeof(Daily));
+
+        for (int i = 0 ; i < person.nTarefas; i++){
+            tarefasDiarias[i].disciplina = person.tarefas[i].nome;
+            
+            if (horas_Hoje > 0 && horasEstudo (person.tarefas[i]) > horas_Hoje){
+                tarefasDiarias[i].horas = horas_Hoje;
+            }
+            else if (horas_Hoje > 0) tarefasDiarias[i].horas = horasEstudo (person.tarefas[i]);
+            
+            horas_Hoje = horas_Hoje - horasEstudo (person.tarefas[i]);
+        }
+
+        return tarefasDiarias;
+    }
+
+
+
