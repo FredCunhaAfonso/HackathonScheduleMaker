@@ -17,4 +17,6 @@ typedef struct pessoa {
 void test_user();
 Pessoa * pessoa_nova (char* nome, char* classe, Tarefa * tarefas, int dias[7]);
 
+Daily* makeSchedule (double horas_Hoje , Pessoa person);
+
 #endif
