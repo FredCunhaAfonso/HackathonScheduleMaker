@@ -1,5 +1,7 @@
 #include "../header/parser.h"
 #include "first.h"
+#include "../header/user.h"
+#include "../header/first.h"
 
 void test_parse(){
 	int nums[] = {5,4,7,3,3,4,2}; 
@@ -25,9 +27,13 @@ void test_parse(){
 	print_user_file("Joao");
 }
 
-int main(int argc, char *argv[]) {
-    // Call initGTK with appropriate arguments
-    initGTK(argc, argv);
+
+int main(){
+	
+	test_parse();
+	printf("\n\n");
+
+	test_user();
 
 	return 0;
 }
